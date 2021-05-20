@@ -20,7 +20,12 @@ Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.
 
 ## Running end-to-end tests
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+* used the Angular Schematics to configure the Angular project with Cypress in one command : ng add @briebug/cypress-schematic --addCypressTestScripts
+* went ahead and removed protractor
+* next after installation, went ahead and updated the spec.ts file under integration folder with simple tests.
+* To set up CI, npm install --save-dev start-server-and-test
+* Add "e2e:ci": "start-server-and-test start http://localhost:4200 cy:run" to scripts in package.json
+* create .github > workflows > cypress-e2e.yml file accordingly
 
 ## Further help
 
